@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume — [Your Name]</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><a href="index.html" class="logo">[YourName]</a></div>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="sop.html">SOP</a></li>
+          <li><a href="recommendations.html">Recommendations</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container file-page">
+    <h1>Resume</h1>
+    <p>Upload your resume PDF to <code>assets/resume.pdf</code> and it will appear below. (Replace the placeholder file with your actual resume.)</p>
+
+    <div class="file-gallery">
+      <!-- Example file card: replace thumbnails/resume.pdf with your own-->
+      <div class="file-card" data-file="assets/resume.pdf" data-title="Resume (PDF)">
+        <div class="thumb">PDF</div>
+        <div class="file-info">
+          <h4>Resume</h4>
+          <p class="muted">Hover to preview • Click to open</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><small>&copy; <span id="year-3"></span> [Your Name]</small></div>
+  </footer>
+</body>
+</html>
