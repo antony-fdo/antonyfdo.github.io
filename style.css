@@ -1,0 +1,91 @@
+:root{
+  --bg: #ffffff;
+  --text: #0b1220;
+  --muted: #6b7280;
+  --accent: #0b4da3; /* royal blue */
+  --accent-dark: #083670;
+  --card: #f8fafc;
+  --radius: 10px;
+  --container: 1100px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* layout helpers */
+.container{max-width:var(--container);margin:0 auto;padding:28px}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.site-header{border-bottom:1px solid #e6eef8;background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));position:sticky;top:0;z-index:40}
+
+/* brand */
+.brand .logo{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.15rem}
+.tagline{display:block;font-size:0.9rem;color:var(--muted)}
+
+/* nav */
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:12px;align-items:center}
+.nav-list a{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:8px;display:inline-block}
+.nav-list a:hover{background:#f1f6fb;color:var(--accent-dark)}
+.has-dropdown{position:relative}
+.dropdown{position:absolute;left:0;top:40px;background:#fff;border-radius:8px;padding:10px;box-shadow:0 6px 20px rgba(11,77,163,0.08);display:none;min-width:200px}
+.has-dropdown:hover .dropdown{display:block}
+.dropdown li{list-style:none}
+.dropdown a{display:block;padding:6px 10px;color:var(--text)}
+
+/* hero */
+.hero{display:flex;gap:28px;align-items:center;padding:36px 0}
+.hero-left{flex:1}
+.hero-right{flex:1;display:flex;align-items:center;justify-content:center}
+.headshot{width:160px;height:160px;object-fit:cover;border-radius:12px;border:4px solid #fff;box-shadow:0 10px 30px rgba(11,77,163,0.06)}
+.name{margin:8px 0 0;font-size:1.6rem}
+.sub{color:var(--muted);margin:6px 0}
+.honors{background:linear-gradient(90deg, rgba(11,77,163,0.06), rgba(11,77,163,0.02));padding:8px;border-radius:8px;color:var(--accent-dark);display:inline-block}
+
+/* abstract image */
+.abstract{max-width:460px;width:100%;border-radius:12px;box-shadow:0 12px 40px rgba(11,77,163,0.06)}
+
+/* content */
+h2{font-size:1.1rem;color:var(--accent-dark);margin-top:0}
+.bio p{max-width:780px}
+.projects .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 8px 20px rgba(11,77,163,0.03)}
+
+/* contact & footer */
+.contact p{margin:0}
+.site-footer{padding:18px 0;border-top:1px solid #eef6ff;margin-top:36px;color:var(--muted);font-size:0.9rem;text-align:center}
+
+/* CV/Pages */
+.cv-main{padding:28px}
+.cv-section{margin-bottom:20px}
+.cv-item{padding:12px;border-left:3px solid var(--accent);background:#fff;border-radius:8px;box-shadow:0 8px 18px rgba(11,77,163,0.02)}
+
+/* file gallery + preview */
+.file-gallery{display:flex;gap:12px;flex-wrap:wrap}
+.file-card{display:flex;align-items:center;gap:12px;padding:12px;border-radius:10px;background:#fff;border:1px solid #eef6ff;cursor:pointer;transition:transform .14s ease,box-shadow .14s ease}
+.file-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(11,77,163,0.06)}
+.file-card .thumb{width:64px;height:64px;border-radius:8px;background:linear-gradient(180deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+.muted{color:var(--muted);font-size:0.95rem}
+
+/* modal */
+.modal-backdrop{position:fixed;inset:0;background:rgba(6,12,25,0.6);display:none;align-items:center;justify-content:center;z-index:60;padding:20px}
+.modal{background:#fff;width:100%;max-width:920px;border-radius:12px;overflow:hidden;box-shadow:0 30px 80px rgba(6,10,30,0.5)}
+.modal .modal-header{display:flex;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #f2f6fb}
+.modal .modal-body{height:70vh}
+.modal iframe{width:100%;height:100%;border:0}
+
+/* responsiveness */
+@media (max-width:900px){
+  .hero{flex-direction:column}
+  .header-inner{flex-direction:column;align-items:flex-start;gap:10px;padding:10px}
+  .nav-list{flex-wrap:wrap}
+  .dropdown{position:static;box-shadow:none;padding:6px;background:transparent;display:none}
+  .has-dropdown:hover .dropdown{display:block}
+}
