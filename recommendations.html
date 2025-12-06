@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recommendations — [Your Name]</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><a href="index.html" class="logo">[YourName]</a></div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="sop.html">SOP</a></li>
+          <li><a href="recommendations.html">Recommendations</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container file-page">
+    <h1>Recommendation Letters</h1>
+    <p>Upload recommendation PDFs to the <code>assets/</code> folder and add cards below (copy the HTML block). Each card will preview on hover and open in a modal when clicked.</p>
+
+    <div class="file-gallery">
+      <!-- Example recommender card -->
+      <div class="file-card" data-file="assets/reco-1.pdf" data-title="Recommendation — Prof. A">
+        <div class="thumb">PDF</div>
+        <div class="file-info">
+          <h4>Prof. A — Recommendation</h4>
+          <p class="muted">Hover to preview • Click to open</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><small>&copy; <span id="year-5"></span> [Your Name]</small></div>
+  </footer>
+</body>
+</html>
